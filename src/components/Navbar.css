@@ -59,9 +59,9 @@
           transition: var(--transition);
         }
 
-        .nav-links a:hover {
-          color: var(--charcoal);
-          background: var(--light-gray);
+        .nav-links a:hover, .nav-links a.active {
+          color: var(--orange);
+          background: rgba(255, 107, 0, 0.05);
         }
 
         .nav-cta {

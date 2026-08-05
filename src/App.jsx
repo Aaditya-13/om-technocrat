@@ -29,34 +29,8 @@ function App() {
       revealObserver.observe(el);
     });
 
-    // 2. Active Nav Link Highlight
-    const sections = document.querySelectorAll('section[id]');
-    const navItems = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navItems.forEach(item => {
-            item.style.color = '';
-            if (item.getAttribute('href') === `#${id}`) {
-              item.style.color = 'var(--orange)';
-            }
-          });
-        }
-      });
-    }, {
-      threshold: 0.3,
-      rootMargin: '-80px 0px -50% 0px'
-    });
-
-    sections.forEach(section => {
-      sectionObserver.observe(section);
-    });
-
     return () => {
       revealObserver.disconnect();
-      sectionObserver.disconnect();
     };
   }, []);
 

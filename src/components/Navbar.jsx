@@ -5,12 +5,29 @@ import './Navbar.css';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 80);
+
+      // Active section scrollspy logic
+      const sections = document.querySelectorAll('section[id]');
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      setActiveSection(current);
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
+    // Trigger once on mount
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -35,12 +52,12 @@ export default function Navbar() {
           </a>
           
           <div className={clsx("nav-links", isMenuOpen && "open")}>
-            <a href="#about" onClick={closeMenu}>About</a>
-            <a href="#clients" onClick={closeMenu}>Clients</a>
-            <a href="#products" onClick={closeMenu}>Products</a>
-            <a href="#equipment" onClick={closeMenu}>Equipment</a>
-            <a href="#gallery" onClick={closeMenu}>Gallery</a>
-            <a href="#certifications" onClick={closeMenu}>Certifications</a>
+            <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={closeMenu}>About</a>
+            <a href="#clients" className={activeSection === 'clients' ? 'active' : ''} onClick={closeMenu}>Clients</a>
+            <a href="#products" className={activeSection === 'products' ? 'active' : ''} onClick={closeMenu}>Products</a>
+            <a href="#equipment" className={activeSection === 'equipment' ? 'active' : ''} onClick={closeMenu}>Equipment</a>
+            <a href="#gallery" className={activeSection === 'gallery' ? 'active' : ''} onClick={closeMenu}>Gallery</a>
+            <a href="#certifications" className={activeSection === 'certifications' ? 'active' : ''} onClick={closeMenu}>Certifications</a>
             <a href="#contact" className="nav-cta" onClick={closeMenu}>Contact Us</a>
           </div>
           
