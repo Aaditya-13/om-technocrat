@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
+import './Hero.css';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);

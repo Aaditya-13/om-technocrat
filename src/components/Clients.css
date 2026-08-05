@@ -1,0 +1,79 @@
+/* Clients Styles */
+        .clients-marquee {
+          overflow: hidden;
+          width: 100%;
+          margin-top: 50px;
+          padding: 10px 0;
+          position: relative;
+          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .clients-grid {
+          display: flex;
+          width: max-content;
+          animation: marquee 35s linear infinite;
+        }
+
+        .clients-grid:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .client-card {
+          width: 200px;
+          margin-right: 20px;
+          flex-shrink: 0;
+          background: var(--white);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+          padding: 28px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--text-secondary);
+          transition: var(--transition);
+          cursor: pointer;
+          min-height: 100px;
+        }
+
+        .client-card:hover {
+          border-color: var(--orange);
+          box-shadow: 0 4px 20px var(--orange-glow);
+          color: var(--charcoal);
+          transform: translateY(-4px);
+        }
+
+        .client-card .client-initial {
+          width: 44px;
+          height: 44px;
+          border-radius: 10px;
+          background: var(--orange-light);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Outfit', sans-serif;
+          font-weight: 800;
+          font-size: 18px;
+          color: var(--orange);
+          margin-bottom: 10px;
+        }
+
+        .client-card-inner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+

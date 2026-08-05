@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import './Stats.css';
 
 function CountUp({ target }) {
   const [count, setCount] = useState(0);
@@ -39,32 +40,20 @@ export default function Stats() {
       <div className="container">
         <div className="stats-grid">
           <div className="stat-item reveal stagger-1">
-            <div className="stat-icon">
-              <i className="ph ph-medal" style={{ fontSize: '40px' }}></i>
-            </div>
             <div className="stat-value"><CountUp target={30} />+</div>
-            <div className="stat-text">Years of Excellence</div>
+            <div className="stat-text">YEARS OF EXCELLENCE</div>
           </div>
           <div className="stat-item reveal stagger-2">
-            <div className="stat-icon">
-              <i className="ph ph-globe-hemisphere-west" style={{ fontSize: '40px' }}></i>
-            </div>
             <div className="stat-value"><CountUp target={14} />+</div>
-            <div className="stat-text">Global Clients</div>
+            <div className="stat-text">GLOBAL CLIENTS</div>
           </div>
           <div className="stat-item reveal stagger-3">
-            <div className="stat-icon">
-              <i className="ph ph-factory" style={{ fontSize: '40px' }}></i>
-            </div>
             <div className="stat-value"><CountUp target={3} /></div>
-            <div className="stat-text">Manufacturing Plants</div>
+            <div className="stat-text">MANUFACTURING PLANTS</div>
           </div>
           <div className="stat-item reveal stagger-4">
-            <div className="stat-icon">
-              <i className="ph ph-stack" style={{ fontSize: '40px' }}></i>
-            </div>
             <div className="stat-value"><CountUp target={6} />+</div>
-            <div className="stat-text">Product Lines</div>
+            <div className="stat-text">PRODUCT LINES</div>
           </div>
         </div>
       </div>

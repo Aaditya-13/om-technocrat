@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
+import './Footer.css';
 
 export default function Footer() {
   const [showScroll, setShowScroll] = useState(false);

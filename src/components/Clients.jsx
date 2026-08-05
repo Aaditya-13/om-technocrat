@@ -1,4 +1,5 @@
 import React from 'react';
+import './Clients.css';
 
 export default function Clients() {
   const clients = [

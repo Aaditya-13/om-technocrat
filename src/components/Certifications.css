@@ -1,0 +1,112 @@
+/* Certifications Styles */
+        .cert-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+          margin-top: 50px;
+          max-width: 900px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .cert-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .cert-card {
+          background: var(--white);
+          border-radius: var(--radius-lg);
+          padding: 40px 32px;
+          box-shadow: var(--shadow-md);
+          border: 1px solid var(--border);
+          text-align: center;
+          transition: var(--transition);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .cert-card:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-xl);
+        }
+
+        .cert-img {
+          width: 120px;
+          height: 120px;
+          margin: 0 auto 24px;
+          object-fit: contain;
+        }
+
+        .cert-card h4 {
+          font-size: 22px;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+
+        .cert-card .cert-standard {
+          font-size: 16px;
+          color: var(--orange);
+          font-weight: 600;
+          margin-bottom: 12px;
+        }
+
+        .cert-card p {
+          font-size: 14px;
+          color: var(--text-secondary);
+          line-height: 1.7;
+        }
+
+        .cert-status {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 16px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-top: 16px;
+        }
+
+        .cert-status.active {
+          background: #e8f5e9;
+          color: #2e7d32;
+        }
+
+        .cert-status.progress {
+          background: #fff3e0;
+          color: #e65100;
+        }
+
+        .cert-status-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+
+        .cert-status.active .cert-status-dot {
+          background: #2e7d32;
+        }
+
+        .cert-status.progress .cert-status-dot {
+          background: #e65100;
+          animation: pulse-dot 2s ease infinite;
+        }
+
+
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  /* Certifications */
+          .cert-grid {
+            grid-template-columns: 1fr;
+          }
+}

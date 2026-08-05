@@ -1,0 +1,103 @@
+/* Equipment Styles */
+        .equipment-header {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+
+        .equipment-header .section-subtitle {
+          margin: 0 auto;
+        }
+
+        .equipment-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
+        .equipment-card {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: var(--radius-lg);
+          padding: 32px 24px;
+          transition: var(--transition);
+          backdrop-filter: blur(10px);
+        }
+
+        .equipment-card:hover {
+          background: rgba(255, 255, 255, 0.1);
+          border-color: var(--orange);
+          transform: translateY(-4px);
+        }
+
+        .equipment-icon {
+          width: 52px;
+          height: 52px;
+          background: rgba(255, 107, 0, 0.15);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+
+        .equipment-card h4 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 8px;
+          color: var(--white);
+        }
+
+        .equipment-card p {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.6);
+          line-height: 1.6;
+        }
+
+        .capacity-bar {
+          margin-top: 60px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+        }
+
+        .capacity-item {
+          text-align: center;
+          padding: 32px 20px;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: var(--radius-lg);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .capacity-value {
+          font-family: 'Outfit', sans-serif;
+          font-size: 40px;
+          font-weight: 800;
+          color: var(--orange);
+          margin-bottom: 8px;
+        }
+
+        .capacity-label {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.6);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 500;
+        }
+
+
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  /* Equipment */
+          .equipment-grid {
+            grid-template-columns: 1fr;
+          }
+  .capacity-bar {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+          }
+}

@@ -65,10 +65,10 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Stats />
       <About />
       <Clients />
       <Products />
-      <Stats />
       <Equipment />
       <Gallery />
       <Certifications />
