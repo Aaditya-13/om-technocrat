@@ -39,19 +39,19 @@ export default function Stats() {
     <div className="company-stats-section">
       <div className="container">
         <div className="stats-grid">
-          <div className="stat-item reveal stagger-1">
+          <div className="stat-item">
             <div className="stat-value"><CountUp target={30} />+</div>
             <div className="stat-text">YEARS OF EXCELLENCE</div>
           </div>
-          <div className="stat-item reveal stagger-2">
+          <div className="stat-item">
             <div className="stat-value"><CountUp target={14} />+</div>
             <div className="stat-text">GLOBAL CLIENTS</div>
           </div>
-          <div className="stat-item reveal stagger-3">
+          <div className="stat-item">
             <div className="stat-value"><CountUp target={3} /></div>
             <div className="stat-text">MANUFACTURING PLANTS</div>
           </div>
-          <div className="stat-item reveal stagger-4">
+          <div className="stat-item">
             <div className="stat-value"><CountUp target={6} />+</div>
             <div className="stat-text">PRODUCT LINES</div>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
+import Stats from './Stats';
 import './Hero.css';
 
 export default function Hero() {
@@ -63,10 +64,6 @@ export default function Hero() {
       </div>
 
       <div className="container hero-content">
-        <div className="hero-badge">
-          <span className="hero-badge-dot"></span>
-          Since 1994 · IATF 16949 Certified
-        </div>
         <h1 className="hero-title">
           OM <span className="hero-title-accent">TECHNOCRAT</span><br />PVT. LTD.
         </h1>
@@ -97,6 +94,8 @@ export default function Hero() {
           ></button>
         ))}
       </div>
+      
+      <Stats />
     </section>
   );
 }

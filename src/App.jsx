@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Clients from './components/Clients';
 import Products from './components/Products';
-import Stats from './components/Stats';
 import Equipment from './components/Equipment';
 import Gallery from './components/Gallery';
 import Certifications from './components/Certifications';
@@ -65,7 +64,6 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Stats />
       <About />
       <Clients />
       <Products />
