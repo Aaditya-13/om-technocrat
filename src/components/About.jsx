@@ -62,30 +62,6 @@ export default function About() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="about-features"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <div className="about-feature">
-            <span className="about-feature-icon">✓</span>
-            IATF Certified
-          </div>
-          <div className="about-feature">
-            <span className="about-feature-icon">⚙</span>
-            CNC Precision
-          </div>
-          <div className="about-feature">
-            <span className="about-feature-icon">🌐</span>
-            Global Reach
-          </div>
-          <div className="about-feature">
-            <span className="about-feature-icon">🔧</span>
-            In-house Tooling
-          </div>
-        </motion.div>
       </div>
     </section>
   );

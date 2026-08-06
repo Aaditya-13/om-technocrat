@@ -39,12 +39,12 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Certifications />
       <Plants />
       <Clients />
       <Products />
       <Equipment />
       <Gallery />
-      <Certifications />
       <Contact />
       <Footer />
     </>

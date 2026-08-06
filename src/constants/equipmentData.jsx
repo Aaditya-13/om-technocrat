@@ -47,17 +47,17 @@ export const capacityMetrics = [
     delay: "stagger-1"
   },
   {
-    value: "400T",
+    value: "600T",
     label: "Max Press Capacity",
     delay: "stagger-2"
   },
   {
-    value: "25,000+",
+    value: "197,000+",
     label: "Sq. Ft. Area",
     delay: "stagger-3"
   },
   {
-    value: "150+",
+    value: "400+",
     label: "Skilled Workforce",
     delay: "stagger-4"
   }

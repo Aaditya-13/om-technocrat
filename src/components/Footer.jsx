@@ -37,6 +37,7 @@ export default function Footer() {
               <h5>Quick Links</h5>
               <ul>
                 <li><a href="#about">About Us</a></li>
+                <li><a href="#plants">Our Plants</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#equipment">Equipment</a></li>
                 <li><a href="#certifications">Certifications</a></li>
@@ -72,9 +73,9 @@ export default function Footer() {
       </footer>
 
       {/* Scroll to Top Button */}
-      <button 
-        className={clsx("scroll-top", showScroll && "show")} 
-        onClick={scrollToTop} 
+      <button
+        className={clsx("scroll-top", showScroll && "show")}
+        onClick={scrollToTop}
         aria-label="Scroll to top"
       >
         <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
