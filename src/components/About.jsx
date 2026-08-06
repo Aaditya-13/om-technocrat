@@ -1,19 +1,56 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './About.css';
 
 export default function About() {
   return (
     <section className="section" id="about">
       <div className="container">
-        <div className="section-label reveal">About Us</div>
-        <h2 className="section-title reveal">Engineering Precision<br />Since <span style={{ color: 'var(--orange)' }}>1994</span></h2>
-        <p className="section-subtitle reveal">Three decades of manufacturing excellence, delivering world-class automotive components to global OEMs.</p>
+        <motion.div 
+          className="section-label"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >About Us</motion.div>
+        
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          Engineering Precision<br />Since <span style={{ color: 'var(--orange)' }}>1994</span>
+        </motion.h2>
+        
+        <motion.p 
+          className="section-subtitle"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Three decades of manufacturing excellence, delivering world-class automotive components to global OEMs.
+        </motion.p>
 
         <div className="about-grid">
-          <div className="about-image reveal-left">
+          <motion.div 
+            className="about-image"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          >
             <img src="/images/about-factory.png" alt="OM Technocrat Manufacturing Facility" loading="lazy" />
-          </div>
-          <div className="about-description reveal-right">
+          </motion.div>
+          <motion.div 
+            className="about-description"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          >
             <h3>A Legacy of Manufacturing Excellence</h3>
             <p>Founded in 1994, OM TECHNOCRAT PVT. LTD. has grown from a modest operation in Nashik, India to a globally recognized manufacturer of automotive sheet metal parts. With over three decades of expertise, we serve some of the world's most prestigious automotive OEMs and Tier-1 suppliers.</p>
             <p>Our commitment to quality, precision engineering, and continuous innovation has earned us the trust of clients across India, USA, Australia, and Europe. We hold the prestigious IATF 16949:2016 certification, reflecting our dedication to automotive quality management systems.</p>
@@ -36,27 +73,9 @@ export default function About() {
                 In-house Tooling
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Group Plants */}
-        <div className="plants-grid">
-          <div className="plant-card reveal stagger-1">
-            <div className="plant-icon">🏭</div>
-            <h4>Plant 1 — Main Facility</h4>
-            <p>D-44/1, MIDC Area, Ambad, Nashik. Our primary manufacturing hub equipped with stamping, welding, and assembly lines for high-volume production.</p>
-          </div>
-          <div className="plant-card reveal stagger-2">
-            <div className="plant-icon">⚙️</div>
-            <h4>Plant 2 — Tooling Unit</h4>
-            <p>Dedicated tooling and die-making facility with precision CNC machining centers for designing and manufacturing press tools and fixtures.</p>
-          </div>
-          <div className="plant-card reveal stagger-3">
-            <div className="plant-icon">📦</div>
-            <h4>Plant 3 — Assembly Unit</h4>
-            <p>Advanced sub-assembly and final assembly plant with automated welding cells, quality inspection bays, and integrated packaging lines.</p>
-          </div>
-        </div>
       </div>
     </section>
   );

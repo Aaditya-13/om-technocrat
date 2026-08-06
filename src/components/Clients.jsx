@@ -1,8 +1,53 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { clientsList as clients } from '../constants/clientsData';
 import './Clients.css';
 
 export default function Clients() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollRef = useRef(null);
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const scrollPosition = scrollRef.current.scrollLeft;
+    // client-card width is 200px + 20px margin = 220px
+    const cardWidth = 220; 
+    const newIndex = Math.round(scrollPosition / cardWidth);
+    if (newIndex !== activeIndex) {
+      setActiveIndex(newIndex % clients.length);
+    }
+  };
+
+  useEffect(() => {
+    if (isPaused) return;
+    let animationFrameId;
+    
+    const autoScroll = () => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += 1; // 1px per frame
+        
+        // If we reach the end of the first set, seamlessly loop back
+        const maxScroll = (clients.length * 220);
+        if (scrollRef.current.scrollLeft >= maxScroll) {
+          scrollRef.current.scrollLeft = 0;
+        }
+      }
+      animationFrameId = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(autoScroll);
+    
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [clients.length, isPaused]);
+
+  const scrollTo = (index) => {
+    if (!scrollRef.current) return;
+    const cardWidth = 220;
+    scrollRef.current.scrollTo({
+      left: index * cardWidth,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <section className="section section-alt" id="clients">
@@ -13,8 +58,17 @@ export default function Clients() {
           <p className="section-subtitle reveal" style={{ margin: '0 auto' }}>Partnering with the world's most prestigious automotive OEMs and Tier-1 suppliers across four continents.</p>
         </div>
 
-        <div className="clients-marquee">
-          <div className="clients-grid" id="clientsGrid">
+        <div className="clients-carousel-container">
+          <div 
+            className="clients-grid" 
+            id="clientsGrid" 
+            ref={scrollRef} 
+            onScroll={handleScroll}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
             {clients.map((client, idx) => (
               <div key={idx} className={`client-card reveal ${client.delay}`}>
                 <div className="client-card-inner">
@@ -23,14 +77,33 @@ export default function Clients() {
                 </div>
               </div>
             ))}
-            {/* Clone for infinite marquee effect */}
+            {/* Clone for infinite loop */}
             {clients.map((client, idx) => (
-              <div key={`clone-${idx}`} className={`client-card`} style={{ opacity: 1, transform: 'translateY(0)' }}>
+              <div key={`clone-${idx}`} className={`client-card reveal ${client.delay}`}>
                 <div className="client-card-inner">
                   {client.svg}
                   {client.name}
                 </div>
               </div>
+            ))}
+            {/* Second clone to ensure smooth wrapping on ultra-wide screens */}
+            {clients.map((client, idx) => (
+              <div key={`clone2-${idx}`} className={`client-card reveal ${client.delay}`}>
+                <div className="client-card-inner">
+                  {client.svg}
+                  {client.name}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="carousel-dots">
+            {clients.map((_, idx) => (
+              <div 
+                key={idx} 
+                className={`carousel-dot ${activeIndex === idx ? 'active' : ''}`}
+                onClick={() => scrollTo(idx)}
+              ></div>
             ))}
           </div>
         </div>

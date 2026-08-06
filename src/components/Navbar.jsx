@@ -53,6 +53,7 @@ export default function Navbar() {
           
           <div className={clsx("nav-links", isMenuOpen && "open")}>
             <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={closeMenu}>About</a>
+            <a href="#plants" className={activeSection === 'plants' ? 'active' : ''} onClick={closeMenu}>Plants</a>
             <a href="#clients" className={activeSection === 'clients' ? 'active' : ''} onClick={closeMenu}>Clients</a>
             <a href="#products" className={activeSection === 'products' ? 'active' : ''} onClick={closeMenu}>Products</a>
             <a href="#equipment" className={activeSection === 'equipment' ? 'active' : ''} onClick={closeMenu}>Equipment</a>

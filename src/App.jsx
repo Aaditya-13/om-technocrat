@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Plants from './components/Plants';
 import Clients from './components/Clients';
 import Products from './components/Products';
 import Equipment from './components/Equipment';
@@ -11,9 +12,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  // Global Scroll Reveal & Active Nav Link Observer
   useEffect(() => {
-    // 1. Scroll Reveal Animations
+    // 1. Scroll Reveal Animations (Legacy, for sections not yet using framer-motion)
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -25,7 +25,7 @@ function App() {
       rootMargin: '0px 0px -40px 0px'
     });
 
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-1, .stagger-2, .stagger-3').forEach(el => {
       revealObserver.observe(el);
     });
 
@@ -39,6 +39,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Plants />
       <Clients />
       <Products />
       <Equipment />

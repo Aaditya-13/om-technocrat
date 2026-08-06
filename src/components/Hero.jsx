@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import Stats from './Stats';
 import './Hero.css';
@@ -36,21 +37,21 @@ export default function Hero() {
       <div className="hero-slideshow">
         {[1, 2, 3, 4].map((num, idx) => (
           <div key={num} className={clsx("hero-slide", currentSlide === idx && "active")}>
-            <img 
-              src={`/images/hero-${num}.png`} 
-              alt={`Slide ${num}`} 
-              loading={idx === 0 ? "eager" : "lazy"} 
+            <img
+              src={`/images/landing/landing-${num}.jpeg`}
+              alt={`Slide ${num}`}
+              loading={idx === 0 ? "eager" : "lazy"}
             />
           </div>
         ))}
       </div>
-      
+
       <div className="hero-overlay"></div>
-      
+
       <div className="hero-particles">
         {particles.map((p) => (
-          <div 
-            key={p.id} 
+          <div
+            key={p.id}
             className="hero-particle"
             style={{
               left: p.left,
@@ -64,13 +65,31 @@ export default function Hero() {
       </div>
 
       <div className="container hero-content">
-        <h1 className="hero-title">
+        <motion.h1
+          className="hero-title"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           OM <span className="hero-title-accent">TECHNOCRAT</span><br />PVT. LTD.
-        </h1>
-        <p className="hero-tagline">
+        </motion.h1>
+        <motion.p
+          className="hero-tagline"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
           Precision Engineered Automotive Sheet Metal Parts — Trusted by the World's Leading OEMs
-        </p>
-        <div className="hero-actions">
+        </motion.p>
+        <motion.div
+          className="hero-actions"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+        >
           <div className="hero-buttons">
             <a href="#products" className="btn btn-primary">
               <i className="ph ph-magnifying-glass" style={{ fontSize: '20px' }}></i>
@@ -81,12 +100,12 @@ export default function Hero() {
               Contact Us
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="hero-slider-nav">
         {[0, 1, 2, 3].map((idx) => (
-          <button 
+          <button
             key={idx}
             className={clsx("hero-dot", currentSlide === idx && "active")}
             onClick={() => goToSlide(idx)}
@@ -94,7 +113,7 @@ export default function Hero() {
           ></button>
         ))}
       </div>
-      
+
       <Stats />
     </section>
   );

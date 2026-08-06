@@ -77,23 +77,22 @@ export default function Contact() {
 
             <form id="contactForm" onSubmit={handleSubmit} style={{ display: isSuccess ? 'none' : 'block' }}>
               <div className="form-row">
-                <div className="form-group">
+                <div className="form-group floating">
+                  <input type="text" id="contactName" name="name" className="form-control" placeholder=" " required />
                   <label htmlFor="contactName">Full Name *</label>
-                  <input type="text" id="contactName" name="name" placeholder="Your Name" required />
                 </div>
-                <div className="form-group">
+                <div className="form-group floating">
+                  <input type="text" id="contactCompany" name="company" className="form-control" placeholder=" " />
                   <label htmlFor="contactCompany">Company</label>
-                  <input type="text" id="contactCompany" name="company" placeholder="Company Name" />
                 </div>
               </div>
-              <div className="form-group">
+              <div className="form-group floating">
+                <input type="email" id="contactEmail" name="email" className="form-control" placeholder=" " required />
                 <label htmlFor="contactEmail">Email Address *</label>
-                <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required />
               </div>
-              <div className="form-group">
-                <label htmlFor="contactProduct">Product Interest</label>
-                <select id="contactProduct" name="product">
-                  <option value="">Select a product category</option>
+              <div className="form-group floating">
+                <select id="contactProduct" name="product" className="form-control" required>
+                  <option value="" disabled selected hidden></option>
                   <option value="seat-frames">Seat Frames</option>
                   <option value="suv-frames">SUV 2nd Row Frames</option>
                   <option value="cushion-pan">Seat Cushion Pan</option>
@@ -102,10 +101,11 @@ export default function Contact() {
                   <option value="risers">Risers for Thar Roxx</option>
                   <option value="other">Other / Custom Requirements</option>
                 </select>
+                <label htmlFor="contactProduct">Inquiry Type</label>
               </div>
-              <div className="form-group">
+              <div className="form-group floating">
+                <textarea id="contactMessage" name="message" className="form-control" placeholder=" " required></textarea>
                 <label htmlFor="contactMessage">Message *</label>
-                <textarea id="contactMessage" name="message" placeholder="Tell us about your requirements..." required></textarea>
               </div>
               <button type="submit" className="btn btn-primary form-submit" disabled={isSubmitting}>
                 {isSubmitting ? (

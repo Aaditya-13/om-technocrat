@@ -1,0 +1,131 @@
+/* Plants Carousel Styles */
+.plants-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.plants-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 10px; /* Space for buttons */
+}
+
+.plants-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* The inline style handles the dynamic transform */
+}
+
+.plant-carousel-card {
+  padding: 0 15px; /* Creates the gap between cards */
+  box-sizing: border-box;
+}
+
+.plant-card-inner {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.plant-card-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--orange-glow);
+}
+
+.plant-image-banner {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.plant-image-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.plant-card-inner:hover .plant-image-banner img {
+  transform: scale(1.05);
+}
+
+.plant-content {
+  padding: 30px;
+  position: relative;
+  flex: 1;
+}
+
+.plant-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.plant-content h4 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: var(--charcoal);
+  line-height: 1.4;
+}
+
+.plant-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--charcoal);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background: var(--orange);
+  color: var(--white);
+  border-color: var(--orange);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .plant-image-banner {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plants-carousel-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .plants-carousel-viewport {
+    margin: 0;
+  }
+  
+  .carousel-btn {
+    display: none; /* Hide buttons on mobile in favor of dots/swiping */
+  }
+}
