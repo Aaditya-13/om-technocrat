@@ -48,7 +48,7 @@ export default function Stats() {
             <div className="stat-text">GLOBAL CLIENTS</div>
           </div>
           <div className="stat-item">
-            <div className="stat-value"><CountUp target={3} /></div>
+            <div className="stat-value"><CountUp target={10} /></div>
             <div className="stat-text">MANUFACTURING PLANTS</div>
           </div>
           <div className="stat-item">

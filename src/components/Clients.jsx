@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { clientsList as clients } from '../constants/clientsData';
+import { clientsList as clients } from '../constants/clientsData.js';
 import './Clients.css';
 
 export default function Clients() {
@@ -11,7 +11,7 @@ export default function Clients() {
     if (!scrollRef.current) return;
     const scrollPosition = scrollRef.current.scrollLeft;
     // client-card width is 200px + 20px margin = 220px
-    const cardWidth = 220; 
+    const cardWidth = 220;
     const newIndex = Math.round(scrollPosition / cardWidth);
     if (newIndex !== activeIndex) {
       setActiveIndex(newIndex % clients.length);
@@ -21,11 +21,11 @@ export default function Clients() {
   useEffect(() => {
     if (isPaused) return;
     let animationFrameId;
-    
+
     const autoScroll = () => {
       if (scrollRef.current) {
         scrollRef.current.scrollLeft += 1; // 1px per frame
-        
+
         // If we reach the end of the first set, seamlessly loop back
         const maxScroll = (clients.length * 220);
         if (scrollRef.current.scrollLeft >= maxScroll) {
@@ -36,7 +36,7 @@ export default function Clients() {
     };
 
     animationFrameId = requestAnimationFrame(autoScroll);
-    
+
     return () => cancelAnimationFrame(animationFrameId);
   }, [clients.length, isPaused]);
 
@@ -59,51 +59,70 @@ export default function Clients() {
         </div>
 
         <div className="clients-carousel-container">
-          <div 
-            className="clients-grid" 
-            id="clientsGrid" 
-            ref={scrollRef} 
+          <div
+            className="clients-grid"
+            id="clientsGrid"
+            ref={scrollRef}
             onScroll={handleScroll}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onTouchStart={() => setIsPaused(true)}
             onTouchEnd={() => setIsPaused(false)}
+            onFocus={() => setIsPaused(true)}
+            onBlur={() => setIsPaused(false)}
+            tabIndex="0"
+            aria-label="Clients carousel"
+            role="region"
           >
             {clients.map((client, idx) => (
               <div key={idx} className={`client-card reveal ${client.delay}`}>
                 <div className="client-card-inner">
-                  {client.svg}
-                  {client.name}
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="client-logo"
+                  />
+
+                  <span>{client.name}</span>
                 </div>
               </div>
             ))}
             {/* Clone for infinite loop */}
             {clients.map((client, idx) => (
-              <div key={`clone-${idx}`} className={`client-card reveal ${client.delay}`}>
+              <div key={`clone-${idx}`} className={`client-card reveal ${client.delay}`} aria-hidden="true">
                 <div className="client-card-inner">
-                  {client.svg}
-                  {client.name}
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="client-logo"
+                  />
+                  <span>{client.name}</span>
                 </div>
               </div>
             ))}
             {/* Second clone to ensure smooth wrapping on ultra-wide screens */}
             {clients.map((client, idx) => (
-              <div key={`clone2-${idx}`} className={`client-card reveal ${client.delay}`}>
+              <div key={`clone2-${idx}`} className={`client-card reveal ${client.delay}`} aria-hidden="true">
                 <div className="client-card-inner">
-                  {client.svg}
-                  {client.name}
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="client-logo"
+                  />
+                  <span>{client.name}</span>
                 </div>
               </div>
             ))}
           </div>
-          
+
           <div className="carousel-dots">
             {clients.map((_, idx) => (
-              <div 
-                key={idx} 
+              <button
+                key={idx}
                 className={`carousel-dot ${activeIndex === idx ? 'active' : ''}`}
                 onClick={() => scrollTo(idx)}
-              ></div>
+                aria-label={`Go to client slide ${idx + 1}`}
+              ></button>
             ))}
           </div>
         </div>

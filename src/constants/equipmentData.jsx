@@ -4,7 +4,7 @@ import { Factory, Cpu, PenTool, Microscope, Wrench, FlaskConical } from 'lucide-
 export const equipmentList = [
   {
     icon: <Factory size={28} strokeWidth={1.5} />,
-    title: "Hydraulic Press Lines",
+    title: "Pneumatic Press Lines",
     description: "High-tonnage hydraulic and mechanical presses (50T – 400T) for stamping, forming, and deep drawing operations.",
     delay: "stagger-1"
   },
