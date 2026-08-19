@@ -119,27 +119,27 @@
         .section-label {
           display: inline-flex;
           align-items: center;
-          gap: 8px;
-          font-size: 13px;
-          font-weight: 600;
-          letter-spacing: 3px;
+          gap: 12px;
+          font-size: clamp(32px, 5vw, 52px);
+          font-weight: 800;
+          letter-spacing: -1px;
           text-transform: uppercase;
           color: var(--orange);
-          margin-bottom: 16px;
+          margin-bottom: 8px;
         }
 
         .section-label::before {
           content: '';
-          width: 32px;
-          height: 2px;
+          width: 48px;
+          height: 4px;
           background: var(--orange);
         }
 
         .section-title {
-          font-size: clamp(32px, 5vw, 52px);
-          font-weight: 800;
-          margin-bottom: 20px;
-          letter-spacing: -1px;
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 24px;
+          color: var(--charcoal);
         }
 
         .section-subtitle {

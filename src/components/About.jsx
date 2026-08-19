@@ -42,7 +42,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           >
-            <img src="/images/about-factory.jpeg" alt="OM Technocrat Manufacturing Facility" loading="lazy" />
+            <img src="/images/om-technocrats-logo.jpeg" alt="OM Technocrat Logo" loading="lazy" />
           </motion.div>
           <motion.div
             className="about-description"
