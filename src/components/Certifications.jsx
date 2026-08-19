@@ -7,7 +7,9 @@ export default function Certifications() {
       <div className="container">
         <div style={{ textAlign: 'center' }}>
           <div className="section-label reveal" style={{ justifyContent: 'center' }}>Certifications</div>
-          <h3 className="section-title reveal" style={{ fontSize: '32px' }}>Quality <span style={{ color: 'var(--orange)' }}>Accreditations</span></h3>
+          <h3 className="section-title reveal">
+  Quality <span style={{ color: 'var(--orange)' }}>Accreditations</span>
+</h3>
           <p className="section-subtitle reveal" style={{ margin: '0 auto' }}>Our certifications reflect our unwavering commitment to quality, safety, and environmental responsibility.</p>
         </div>
 
