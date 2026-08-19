@@ -21,7 +21,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Engineering Precision<br />Since <span style={{ color: 'var(--orange)' }}>1994</span>
+          Growing Through Manufacturing Excellence<br />Since <span style={{ color: 'var(--orange)' }}>1994</span>
         </motion.h2>
 
         <motion.p
