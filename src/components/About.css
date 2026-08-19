@@ -1,188 +1,136 @@
 /* About Styles */
-        .about-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: flex-start;
-          margin-top: 60px;
-        }
 
-        .about-image {
-          position: relative;
-          border-radius: var(--radius-lg);
-          overflow: hidden;
-          aspect-ratio: 4/3;
-        }
+/* Center the main section heading */
+.about-section-label {
+  width: 100%;
+  justify-content: center;
+}
 
-        .about-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+/* Center the About Us title */
+.about-section-title {
+  width: 100%;
+  text-align: center;
+}
 
-        .about-image-placeholder {
-          text-align: center;
-          color: rgba(255, 255, 255, 0.5);
-        }
+/* Center the introductory subtitle */
+.about-section-subtitle {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
-        .about-image-placeholder svg {
-          width: 80px;
-          height: 80px;
-          margin-bottom: 12px;
-          opacity: 0.3;
-        }
+/* Main About Content */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 60px auto 0;
+}
 
-        .about-image::after {
-          content: '';
-          position: absolute;
-          bottom: -20px;
-          right: -20px;
-          width: 120px;
-          height: 120px;
-          border: 3px solid var(--orange);
-          border-radius: var(--radius-lg);
-          z-index: -1;
-        }
+.about-description h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
-        .about-description h3 {
-          font-size: 28px;
-          font-weight: 700;
-          margin-bottom: 20px;
-        }
+.about-description p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.8;
+}
 
-        .about-description p {
-          color: var(--text-secondary);
-          margin-bottom: 16px;
-          font-size: 16px;
-          line-height: 1.8;
-        }
+/* Group Plants */
 
-        .about-features {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 16px;
-          margin-top: 40px;
-        }
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
 
-        .about-feature {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          padding: 14px 18px;
-          background: var(--orange-light);
-          border-radius: var(--radius-sm);
-          font-size: 14px;
-          font-weight: 600;
-          transition: var(--transition);
-        }
+.plant-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-        .about-feature:hover {
-          background: rgba(255, 107, 0, 0.15);
-          transform: translateX(4px);
-        }
+.plant-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange), #ff9a44);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
 
-        .about-feature-icon {
-          width: 32px;
-          height: 32px;
-          background: var(--orange);
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--white);
-          font-size: 16px;
-          flex-shrink: 0;
-        }
+.plant-card:hover::before {
+  transform: scaleX(1);
+}
 
-        /* Group Plants */
-        .plants-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
-          margin-top: 60px;
-        }
+.plant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
 
-        .plant-card {
-          background: var(--white);
-          border-radius: var(--radius-lg);
-          padding: 36px 28px;
-          box-shadow: var(--shadow-md);
-          border: 1px solid var(--border);
-          transition: var(--transition);
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-        }
+.plant-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--orange-light);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+}
 
-        .plant-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 4px;
-          background: linear-gradient(90deg, var(--orange), #ff9a44);
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.4s ease;
-        }
+.plant-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
-        .plant-card:hover::before {
-          transform: scaleX(1);
-        }
+.plant-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
 
-        .plant-card:hover {
-          transform: translateY(-6px);
-          box-shadow: var(--shadow-xl);
-        }
-
-        .plant-icon {
-          width: 64px;
-          height: 64px;
-          background: var(--orange-light);
-          border-radius: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          font-size: 28px;
-        }
-
-        .plant-card h4 {
-          font-size: 20px;
-          font-weight: 700;
-          margin-bottom: 10px;
-        }
-
-        .plant-card p {
-          font-size: 14px;
-          color: var(--text-secondary);
-          line-height: 1.6;
-        }
-
-
-
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════ */
+/* Responsive */
 
 @media (max-width: 1024px) {
-  .about-features {
-    grid-template-columns: 1fr 1fr;
+  .about-grid {
+    max-width: 900px;
   }
 }
 
 @media (max-width: 768px) {
-  /* About */
-          .about-grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
-          }
-  .about-features {
-            grid-template-columns: 1fr;
-          }
+  .about-section-subtitle {
+    max-width: 100%;
+  }
+
+  .about-grid {
+    margin-top: 40px;
+  }
+
+  .about-description h3 {
+    font-size: 24px;
+  }
+
   .plants-grid {
-            grid-template-columns: 1fr;
-            gap: 20px;
-          }
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
