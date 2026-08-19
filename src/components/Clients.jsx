@@ -5,7 +5,9 @@ import './Clients.css';
 export default function Clients() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isManualScrolling, setIsManualScrolling] = useState(false);
   const scrollRef = useRef(null);
+  const manualScrollTimer = useRef(null);
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
@@ -19,7 +21,7 @@ export default function Clients() {
   };
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || isManualScrolling) return;
     let animationFrameId;
 
     const autoScroll = () => {
@@ -38,15 +40,24 @@ export default function Clients() {
     animationFrameId = requestAnimationFrame(autoScroll);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [clients.length, isPaused]);
+  }, [clients.length, isPaused, isManualScrolling]);
 
   const scrollTo = (index) => {
     if (!scrollRef.current) return;
+    
+    setIsManualScrolling(true);
+    if (manualScrollTimer.current) clearTimeout(manualScrollTimer.current);
+    
     const cardWidth = 220;
     scrollRef.current.scrollTo({
       left: index * cardWidth,
       behavior: 'smooth'
     });
+
+    // Re-enable auto-scroll after smooth scrolling finishes
+    manualScrollTimer.current = setTimeout(() => {
+      setIsManualScrolling(false);
+    }, 800);
   };
 
   return (
@@ -58,21 +69,23 @@ export default function Clients() {
           <p className="section-subtitle reveal" style={{ margin: '0 auto' }}>Partnering with the world's most prestigious automotive OEMs and Tier-1 suppliers across four continents.</p>
         </div>
 
-        <div className="clients-carousel-container">
+        <div 
+          className="clients-carousel-container"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+          tabIndex="0"
+          aria-label="Clients carousel"
+          role="region"
+        >
           <div
             className="clients-grid"
             id="clientsGrid"
             ref={scrollRef}
             onScroll={handleScroll}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            onTouchStart={() => setIsPaused(true)}
-            onTouchEnd={() => setIsPaused(false)}
-            onFocus={() => setIsPaused(true)}
-            onBlur={() => setIsPaused(false)}
-            tabIndex="0"
-            aria-label="Clients carousel"
-            role="region"
           >
             {clients.map((client, idx) => (
               <div key={idx} className={`client-card reveal ${client.delay}`}>
