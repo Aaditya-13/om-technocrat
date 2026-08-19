@@ -21,6 +21,11 @@ export const clientsList = [
   },
   //TODO: INDIAN RAILWAYS
   {
+    name: "Indian Railways",
+    logo: "/images/logos/indian-railways.jpeg",
+    delay: "stagger-1",
+  },
+  {
     name: "ABB",
     logo: "/images/logos/abb.jpeg",
     delay: "",
