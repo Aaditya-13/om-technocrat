@@ -1,8 +1,22 @@
-export const galleryImages = [
-  { src: "gallery/gallery-factory.png", label: "Main Factory Floor", delay: "stagger-1" },
-  { src: "gallery/gallery-press.png", label: "Press Shop", delay: "stagger-2" },
-  { src: "gallery/gallery-welding.png", label: "Welding Cell", delay: "stagger-3" },
-  { src: "gallery/gallery-quality.png", label: "Quality Lab", delay: "stagger-4" },
-  { src: "gallery/gallery-finished.png", label: "Finished Products", delay: "stagger-5" },
-  { src: "gallery/gallery-assembly.png", label: "Assembly Line", delay: "stagger-6" }
-];
+export const galleryCategories = {
+  "Main Factory": [
+    { src: "gallery/gallery-factory.png", label: "Factory Floor View 1" },
+    { src: "gallery/gallery-assembly.png", label: "Factory Floor View 2" },
+    { src: "gallery/gallery-welding.png", label: "Factory Floor View 3" }
+  ],
+  "Press Shop": [
+    { src: "gallery/gallery-press.png", label: "Press Shop View 1" },
+    { src: "gallery/gallery-factory.png", label: "Press Shop View 2" },
+    { src: "gallery/gallery-finished.png", label: "Press Shop View 3" }
+  ],
+  "Welding Cell": [
+    { src: "gallery/gallery-welding.png", label: "Welding Cell View 1" },
+    { src: "gallery/gallery-press.png", label: "Welding Cell View 2" },
+    { src: "gallery/gallery-assembly.png", label: "Welding Cell View 3" }
+  ],
+  "Quality Lab": [
+    { src: "gallery/gallery-quality.png", label: "Quality Lab View 1" },
+    { src: "gallery/gallery-finished.png", label: "Quality Lab View 2" },
+    { src: "gallery/gallery-factory.png", label: "Quality Lab View 3" }
+  ]
+};
