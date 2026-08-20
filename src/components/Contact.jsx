@@ -8,12 +8,12 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      
+
       // Reset form success state after 5 seconds
       setTimeout(() => {
         setIsSuccess(false);
@@ -43,14 +43,14 @@ export default function Contact() {
                 <div className="contact-info-icon"><i className="ph ph-phone"></i></div>
                 <div>
                   <h4>Call Us</h4>
-                  <a href="tel:+918888832302">+91 8888832302</a>
+                  <a href="tel:0253-2305001">0253-2305001</a>
                 </div>
               </div>
               <div className="contact-info-item">
                 <div className="contact-info-icon"><i className="ph ph-envelope"></i></div>
                 <div>
                   <h4>Email Us</h4>
-                  <a href="mailto:psunil@omtechnocrat.com">psunil@omtechnocrat.com</a>
+                  <a href="mailto:inquiry@omtechnocrat.in">inquiry@omtechnocrat.in</a>
                 </div>
               </div>
               <div className="contact-info-item">

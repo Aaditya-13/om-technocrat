@@ -58,8 +58,8 @@ export default function Footer() {
             <div className="footer-col">
               <h5>Contact</h5>
               <ul>
-                <li><a href="tel:+918888832302">+91 8888832302</a></li>
-                <li><a href="mailto:psunil@omtechnocrat.com">psunil@omtechnocrat.com</a></li>
+                <li><a href="tel:0253-2305001">0253-2305001</a></li>
+                <li><a href="mailto:inquiry@omtechnocrat.in">inquiry@omtechnocrat.in</a></li>
                 <li><a href="#contact">D-44/1, MIDC Ambad, Nashik</a></li>
                 <li><a href="#contact">Maharashtra – 422010</a></li>
               </ul>

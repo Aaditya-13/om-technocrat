@@ -5,7 +5,7 @@ export const equipmentList = [
   {
     icon: <Factory size={28} strokeWidth={1.5} />,
     title: "Pneumatic Press Lines",
-    description: "High-tonnage hydraulic and mechanical presses (50T – 400T) for stamping, forming, and deep drawing operations.",
+    description: "High-tonnage pneumatic and mechanical presses (50T – 400T) for stamping, forming, and deep drawing operations.",
     delay: "stagger-1"
   },
   {
@@ -21,12 +21,6 @@ export const equipmentList = [
     delay: "stagger-3"
   },
   {
-    icon: <Microscope size={28} strokeWidth={1.5} />,
-    title: "CMM Inspection",
-    description: "Coordinate Measuring Machines for dimensional accuracy verification with micron-level precision.",
-    delay: "stagger-1"
-  },
-  {
     icon: <Wrench size={28} strokeWidth={1.5} />,
     title: "SPM Assembly Lines",
     description: "Special Purpose Machines and semi-automated assembly lines for sub-assembly and final assembly operations.",
@@ -35,7 +29,7 @@ export const equipmentList = [
   {
     icon: <FlaskConical size={28} strokeWidth={1.5} />,
     title: "Quality Testing Lab",
-    description: "Fully equipped metallurgical and testing lab with hardness testers, profile projectors, and surface roughness testers.",
+    description: "Fully equipped metallurgical and testing lab with CMM inspection, hardness testers, profile projectors, and surface roughness testers, ensuring accurate measurement and stringent quality control.",
     delay: "stagger-3"
   }
 ];

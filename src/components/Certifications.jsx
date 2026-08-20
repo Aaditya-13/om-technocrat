@@ -37,9 +37,9 @@ export default function Certifications() {
               <h4>ZED Certification</h4>
               <div className="cert-standard">Zero Defect Zero Effect</div>
               <p>Government of India's flagship program for manufacturing enterprises, promoting zero-defect production with zero environmental impact. Our commitment to sustainable manufacturing practices.</p>
-              <div className="cert-status progress">
+              <div className="cert-status active">
                 <span className="cert-status-dot"></span>
-                In Progress
+                Certified
               </div>
             </div>
           </div>
