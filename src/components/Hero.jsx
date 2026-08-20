@@ -38,10 +38,16 @@ export default function Hero() {
         {[1, 2, 3, 4].map((num, idx) => (
           <div key={num} className={clsx("hero-slide", currentSlide === idx && "active")}>
             <img
-              src={`/images/landing/landing-${num}.jpeg`}
-              alt={`Slide ${num}`}
-              loading={idx === 0 ? "eager" : "lazy"}
-            />
+  src={
+    num === 1
+      ? "/images/landing/landing-1.jpg"
+      : num === 4
+        ? "/images/landing/landing-4.jpg"
+        : `/images/landing/landing-${num}.jpeg`
+  }
+  alt={`Slide ${num}`}
+  loading={idx === 0 ? "eager" : "lazy"}
+/>
           </div>
         ))}
       </div>
