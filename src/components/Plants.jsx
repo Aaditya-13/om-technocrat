@@ -98,9 +98,9 @@ export default function Plants() {
                     <div className="plant-image-banner">
                       <img src={plant.image} alt={plant.title} loading="lazy" />
                     </div>
-                    {/* <div className="plant-content">
+                    <div className="plant-content">
                       <h4>{plant.title}</h4>
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               ))}
