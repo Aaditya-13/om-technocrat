@@ -9,7 +9,9 @@ export default function Products() {
       <div className="container">
         <div style={{ textAlign: 'center' }}>
           <div className="section-label reveal" style={{ justifyContent: 'center' }}>Our Products</div>
-          <h2 className="section-title reveal">Precision <span style={{ color: 'var(--orange)' }}>Automotive</span> Components</h2>
+          <h2 className="section-title reveal">
+  Precision Automotive <span style={{ color: 'var(--orange)' }}>Seats and Components</span>
+</h2>
           <p className="section-subtitle reveal" style={{ margin: '0 auto' }}>Engineered for performance, manufactured to perfection. Every component meets the most stringent global automotive standards.</p>
         </div>
 

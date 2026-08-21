@@ -45,10 +45,10 @@ export default function Stats() {
           </div>
           <div className="stat-item">
             <div className="stat-value"><CountUp target={14} />+</div>
-            <div className="stat-text">GLOBAL CLIENTS</div>
+            <div className="stat-text">CLIENTS</div>
           </div>
           <div className="stat-item">
-            <div className="stat-value"><CountUp target={10} /></div>
+            <div className="stat-value"><CountUp target={8} /></div>
             <div className="stat-text">MANUFACTURING PLANTS</div>
           </div>
           <div className="stat-item">

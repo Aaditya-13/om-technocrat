@@ -38,7 +38,7 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           Three decades of manufacturing excellence, delivering world-class
-          automotive components to global OEMs.
+          automotive components to Renowned OEMs.
         </motion.p>
 
         {/* About Content */}
