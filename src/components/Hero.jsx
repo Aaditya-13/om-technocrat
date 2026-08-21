@@ -8,7 +8,7 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [particles, setParticles] = useState([]);
   const SLIDE_DURATION = 5000;
-  const totalSlides = 4;
+  const totalSlides = 3;
 
   useEffect(() => {
     const generatedParticles = Array.from({ length: 20 }).map((_, i) => ({
@@ -35,15 +35,13 @@ export default function Hero() {
   return (
     <section className="hero" id="hero">
       <div className="hero-slideshow">
-        {[1, 2, 3, 4].map((num, idx) => (
+        {[1, 2, 3].map((num, idx) => (
           <div key={num} className={clsx("hero-slide", currentSlide === idx && "active")}>
             <img
   src={
     num === 1
       ? "/images/landing/landing-1.jpg"
-      : num === 4
-        ? "/images/landing/landing-4.jpg"
-        : `/images/landing/landing-${num}.jpeg`
+      : `/images/landing/landing-${num}.jpeg`
   }
   alt={`Slide ${num}`}
   loading={idx === 0 ? "eager" : "lazy"}
@@ -110,7 +108,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-slider-nav">
-        {[0, 1, 2, 3].map((idx) => (
+        {[0, 1, 2].map((idx) => (
           <button
             key={idx}
             className={clsx("hero-dot", currentSlide === idx && "active")}
