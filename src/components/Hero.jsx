@@ -8,7 +8,7 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [particles, setParticles] = useState([]);
   const SLIDE_DURATION = 5000;
-  const totalSlides = 3;
+  const totalSlides = 4;
 
   useEffect(() => {
     const generatedParticles = Array.from({ length: 20 }).map((_, i) => ({
@@ -35,17 +35,17 @@ export default function Hero() {
   return (
     <section className="hero" id="hero">
       <div className="hero-slideshow">
-        {[1, 2, 3].map((num, idx) => (
+        {[1, 3, 2, 4].map((num, idx) => (
           <div key={num} className={clsx("hero-slide", currentSlide === idx && "active")}>
             <img
-  src={
-    num === 1
-      ? "/images/landing/landing-1.jpg"
-      : `/images/landing/landing-${num}.jpeg`
-  }
-  alt={`Slide ${num}`}
-  loading={idx === 0 ? "eager" : "lazy"}
-/>
+              src={
+                num === 1
+                  ? "/images/landing/landing-1.jpg"
+                  : `/images/landing/landing-${num}.jpeg`
+              }
+              alt={`Slide ${num}`}
+              loading={idx === 0 ? "eager" : "lazy"}
+            />
           </div>
         ))}
       </div>
@@ -76,7 +76,7 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          OM <span className="hero-title-accent">TECHNOCRAT</span><br />PVT. LTD.
+          OM <span style={{ color: '#ffffff', marginLeft: '8px' }}>TECHNOCRAT</span><br />PVT. LTD.
         </motion.h1>
         <motion.p
           className="hero-tagline"
@@ -108,7 +108,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-slider-nav">
-        {[0, 1, 2].map((idx) => (
+        {[0, 1, 2, 3].map((idx) => (
           <button
             key={idx}
             className={clsx("hero-dot", currentSlide === idx && "active")}

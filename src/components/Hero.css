@@ -33,16 +33,17 @@
         }
 
         .hero-slide:nth-child(2) img {
-          animation-delay: -2s;
-          transform-origin: top right;
-        }
-
-        .hero-slide:nth-child(3) img {
           animation-delay: -4s;
           transform-origin: bottom left;
         }
 
+        .hero-slide:nth-child(3) img {
+          animation-delay: -2s;
+          transform-origin: top right;
+        }
+
         .hero-slide:nth-child(4) img {
+          animation: kenBurnsOut 8s ease-in-out infinite alternate;
           animation-delay: -6s;
           transform-origin: center;
         }
@@ -54,6 +55,16 @@
 
           100% {
             transform: scale(1.1);
+          }
+        }
+
+        @keyframes kenBurnsOut {
+          0% {
+            transform: scale(1.2) translate(15px, 15px);
+          }
+
+          100% {
+            transform: scale(1) translate(0, 0);
           }
         }
 
