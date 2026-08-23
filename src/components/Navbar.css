@@ -33,15 +33,10 @@
         }
 
         .nav-logo-img {
-          height: 48px;
+          height: 64px;
           border-radius: 6px;
           object-fit: contain;
           box-shadow: var(--shadow-sm);
-          transition: transform var(--transition);
-        }
-
-        .nav-logo:hover .nav-logo-img {
-          transform: scale(1.05);
         }
 
         .nav-links {
