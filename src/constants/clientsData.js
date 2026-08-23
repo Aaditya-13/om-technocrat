@@ -5,18 +5,18 @@ export const clientsList = [
     delay: "stagger-1",
   },
   {
-    name: "Lear Corporation",
-    logo: "/images/logos/lear.jpeg",
-    delay: "stagger-2",
-  },
-  {
     name: "Mahindra Defence",
     logo: "/images/logos/mahindra-def.jpeg",
-    delay: "stagger-3",
+    delay: "stagger-2",
   },
   {
     name: "Mahindra Electric SUVs",
     logo: "/images/logos/mahindra-elec.jpeg",
+    delay: "stagger-3",
+  },
+  {
+    name: "Lear Corporation",
+    logo: "/images/logos/lear.jpeg",
     delay: "stagger-1",
   },
   {
@@ -30,8 +30,8 @@ export const clientsList = [
     delay: "stagger-3",
   },
   {
-    name: "DAS",
-    logo: "/images/logos/das.jpeg",
+    name: "Kongsberg Automotive",
+    logo: "/images/logos/kongsberg.jpeg",
     delay: "stagger-1",
   },
   {
@@ -40,8 +40,8 @@ export const clientsList = [
     delay: "stagger-2",
   },
   {
-    name: "Kongsberg Automotive",
-    logo: "/images/logos/kongsberg.jpeg",
+    name: "DAS",
+    logo: "/images/logos/das.jpeg",
     delay: "stagger-3",
   },
 ];
