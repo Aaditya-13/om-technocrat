@@ -60,17 +60,16 @@ export default function About() {
               Founded in 1994 by Mr. Dineshsingh Raghunathsingh Patil and Mr.
               Ranjeetsingh Dhangar Rajput, OM TECHNOCRAT PVT. LTD. has grown
               into a trusted automotive sheet metal manufacturing company
-              serving leading OEMs and Tier-1 suppliers. Operating from five
-              manufacturing facilities in Nashik and two facilities in Chakan,
-              Pune, with a combined manufacturing area of approximately 197,000
-              sq. ft., we deliver precision-engineered sheet metal components,
-              seat frame assemblies, tooling, and fabrication solutions backed
-              by advanced manufacturing capabilities.
+              serving leading OEMs and Tier-1 suppliers. Operating eight manufacturing
+              plants across Nashik and Pune, with a combined manufacturing area of approximately
+              127,000 sq. ft., we deliver precision-engineered sheet metal components,
+              seat frame assemblies, tooling, and fabrication solutions backed by advanced
+              manufacturing capabilities.
             </p>
 
             <p>
               Supported by 400+ skilled professionals and an IATF
-              16949:2016-certified quality management system, we remain
+              16949:2016-Certified quality management system, we remain
               committed to engineering excellence, precision, reliability,
               and continuous improvement—building long-term partnerships
               through quality manufacturing.
