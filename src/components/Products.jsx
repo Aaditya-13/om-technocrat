@@ -24,7 +24,6 @@ export default function Products() {
               <div className="product-content">
                 <span className="product-tag">{product.tag}</span>
                 <h4>{product.title}</h4>
-                <p>{product.desc}</p>
               </div>
             </div>
           ))}

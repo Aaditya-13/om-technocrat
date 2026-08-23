@@ -40,7 +40,7 @@
         }
 
         .product-content {
-          padding: 28px;
+          padding: 20px 24px;
         }
 
         .product-tag {
@@ -59,7 +59,7 @@
         .product-content h4 {
           font-size: 20px;
           font-weight: 700;
-          margin-bottom: 10px;
+          margin-bottom: 0;
         }
 
         .product-content p {

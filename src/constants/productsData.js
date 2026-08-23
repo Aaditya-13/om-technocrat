@@ -40,5 +40,23 @@ export const productsList = [
     img: "products/risers.png",
     desc: "Specially engineered seat risers developed for the Mahindra Thar Roxx platform, meeting stringent off-road durability and safety requirements.",
     delay: "stagger-3"
+  },
+  {
+    title: "Upcoming Product 1",
+    tag: "Placeholder",
+    img: "products/risers.png",
+    delay: "stagger-1"
+  },
+  {
+    title: "Upcoming Product 2",
+    tag: "Placeholder",
+    img: "products/risers.png",
+    delay: "stagger-2"
+  },
+  {
+    title: "Upcoming Product 3",
+    tag: "Placeholder",
+    img: "products/risers.png",
+    delay: "stagger-3"
   }
 ];
