@@ -4,8 +4,8 @@ import { Factory, Cpu, PenTool, Microscope, Wrench, FlaskConical } from 'lucide-
 export const equipmentList = [
   {
     icon: <Factory size={28} strokeWidth={1.5} />,
-    title: "Pneumatic Press Lines",
-    description: "High-tonnage pneumatic and mechanical presses (50T – 400T) for stamping, forming, and deep drawing operations.",
+    title: "Robotic Pick-and-Place Tandem Pneumatic Press Lines",
+    description: "Automated pneumatic tandem press lines with robotic pick-and-place systems for high-volume stamping and forming operations.",
     delay: "stagger-1"
   },
   {
@@ -46,7 +46,7 @@ export const capacityMetrics = [
     delay: "stagger-2"
   },
   {
-    value: "197,000+",
+    value: "127,000+",
     label: "Sq. Ft. Area",
     delay: "stagger-3"
   },
