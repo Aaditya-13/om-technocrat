@@ -64,7 +64,7 @@ export default function Contact() {
 
             <div className="contact-map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.6!2d73.7508!3d20.0063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb0b5e1d5d57%3A0x9c3e6f8b6e0c8c12!2sMIDC%20Ambad%2C%20Nashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.1174576899343!2d73.742379!3d19.961562000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeca8aef5f367%3A0x70f911a8a4ee7c1a!2sOm%20Technocrat%20Pvt.%20ltd.!5e0!3m2!1sen!2sin!4v1787572622975!5m2!1sen!2sin"
                 allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                 title="OM TECHNOCRAT Location"
               ></iframe>

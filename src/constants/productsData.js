@@ -30,7 +30,7 @@ export const productsList = [
   {
     title: "Seat Frame Tools",
     tag: "Tooling",
-    img: "products/seat-tools.png",
+    img: "products/seat-frame-tool.jpeg",
     desc: "In-house designed and manufactured press tools, jigs, and fixtures enabling cost-effective, high-volume automotive component production.",
     delay: "stagger-2"
   },
@@ -42,9 +42,9 @@ export const productsList = [
     delay: "stagger-3"
   },
   {
-    title: "Upcoming Product 1",
-    tag: "Placeholder",
-    img: "products/risers.png",
+    title: "Seat Side Cushion Member",
+    tag: "Seating",
+    img: "products/seat-side-cushion-member.jpeg",
     delay: "stagger-1"
   },
   {
