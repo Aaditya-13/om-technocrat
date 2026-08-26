@@ -9,12 +9,15 @@
         }
 
         .equipment-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 24px;
         }
 
         .equipment-card {
+          flex: 0 0 calc(33.333% - 16px);
+          max-width: calc(33.333% - 16px);
           background: var(--white);
           border: 1px solid var(--border);
           border-radius: var(--radius-lg);
@@ -55,12 +58,15 @@
 
         .capacity-bar {
           margin-top: 60px;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 24px;
         }
 
         .capacity-item {
+          flex: 0 0 calc(33.333% - 16px);
+          max-width: calc(33.333% - 16px);
           text-align: center;
           padding: 32px 20px;
           background: var(--white);
@@ -92,11 +98,15 @@
 
 @media (max-width: 768px) {
   /* Equipment */
-          .equipment-grid {
-            grid-template-columns: 1fr;
+          .equipment-card {
+            flex: 0 0 100%;
+            max-width: 100%;
           }
-  .capacity-bar {
-            grid-template-columns: repeat(2, 1fr);
+          .capacity-bar {
             gap: 16px;
+          }
+          .capacity-item {
+            flex: 0 0 calc(50% - 8px);
+            max-width: calc(50% - 8px);
           }
 }

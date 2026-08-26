@@ -47,16 +47,16 @@ export const productsList = [
     img: "products/seat-side-cushion-member.jpeg",
     delay: "stagger-1"
   },
-  {
-    title: "Upcoming Product 2",
-    tag: "Placeholder",
-    img: "products/risers.png",
-    delay: "stagger-2"
-  },
-  {
-    title: "Upcoming Product 3",
-    tag: "Placeholder",
-    img: "products/risers.png",
-    delay: "stagger-3"
-  }
+  // {
+  //   title: "Upcoming Product 2",
+  //   tag: "Placeholder",
+  //   img: "products/risers.png",
+  //   delay: "stagger-2"
+  // },
+  // {
+  //   title: "Upcoming Product 3",
+  //   tag: "Placeholder",
+  //   img: "products/risers.png",
+  //   delay: "stagger-3"
+  // }
 ];

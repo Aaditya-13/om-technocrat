@@ -50,9 +50,4 @@ export const capacityMetrics = [
     label: "Sq. Ft. Area",
     delay: "stagger-3"
   },
-  {
-    value: "400+",
-    label: "Skilled Workforce",
-    delay: "stagger-4"
-  }
 ];
