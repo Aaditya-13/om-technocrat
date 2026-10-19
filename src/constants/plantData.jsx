@@ -20,7 +20,7 @@ export const plantData = [
   {
     id: 4,
     title: "Plant 4",
-    image: "/images/plants/plant-05.jpeg",
+    image: "/images/plants/plant-04-update.jpeg",
     delay: "stagger-2"
   },
   {

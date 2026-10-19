@@ -49,7 +49,7 @@ export default function Plants() {
   return (
     <section className="section" id="plants">
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+        <div style={{ textAlign: 'center' }}>
           <motion.div
             className="section-label" style={{ justifyContent: 'center' }}
             initial={{ opacity: 0, y: 30 }}

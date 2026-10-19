@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1000px;
-  margin: 60px auto 0;
+  margin: 48px auto 0;
 }
 
 .about-description h3 {
@@ -39,6 +39,10 @@
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.8;
+}
+
+.about-description p:last-child {
+  margin-bottom: 0;
 }
 
 /* Group Plants */

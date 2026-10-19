@@ -3,7 +3,7 @@ import './Certifications.css';
 
 export default function Certifications() {
   return (
-    <section className="section" id="certifications" style={{ paddingTop: '20px' }}>
+    <section className="section" id="certifications">
       <div className="container">
         <div style={{ textAlign: 'center' }}>
           <div className="section-label reveal" style={{ justifyContent: 'center' }}>Certifications</div>

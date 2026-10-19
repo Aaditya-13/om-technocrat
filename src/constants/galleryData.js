@@ -6,9 +6,11 @@ export const galleryCategories = {
     { src: "gallery/press-machines/4-replace.jpeg", label: "Press Machine View 4" }
   ],
   "Welding Cell": [
-    { src: "gallery/robotic-welding-cells/1.png", label: "Robotic Welding Cell 1" },
-    { src: "gallery/robotic-welding-cells/2.png", label: "Robotic Welding Cell 2" },
-    { src: "gallery/robotic-welding-cells/3-replace-welding.jpeg", label: "Robotic Welding Cell 3" },
+    { src: "gallery/robotic-welding-cells/new-1.jpeg", label: "Robotic Welding Cell 1" },
+    { src: "gallery/robotic-welding-cells/new-2.jpeg", label: "Robotic Welding Cell 2" },
+    { src: "gallery/robotic-welding-cells/1.png", label: "Robotic Welding Cell 3" },
+    { src: "gallery/robotic-welding-cells/2.png", label: "Robotic Welding Cell 4" },
+    { src: "gallery/robotic-welding-cells/3-replace-welding.jpeg", label: "Robotic Welding Cell 5" },
   ],
   "Machinery": [
     { src: "gallery/machinery/1st.jpg", label: "Machinery View 1" },
