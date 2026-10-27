@@ -48,7 +48,7 @@ export default function Navbar() {
       <nav className={clsx("navbar", isScrolled && "scrolled")} id="navbar">
         <div className="container">
           <a href="#hero" className="nav-logo" onClick={closeMenu}>
-            <img src="/images/om-technocrats-logo.jpeg" alt="OM Technocrat Logo" className="nav-logo-img" />
+            <img src="/images/om-technocrats-logo.png" alt="OM Technocrat Logo" className="nav-logo-img" />
           </a>
 
           <div className={clsx("nav-links", isMenuOpen && "open")}>

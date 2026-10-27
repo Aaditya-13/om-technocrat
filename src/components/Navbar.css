@@ -52,9 +52,10 @@
 .nav-logo-img {
   height: 56px;
   width: auto;
-  border-radius: 6px;
   object-fit: contain;
-  box-shadow: var(--shadow-sm);
+  background-color: transparent;
+  mix-blend-mode: multiply;
+  transition: var(--transition);
 }
 
 
