@@ -8,8 +8,8 @@ export default function Equipment() {
       <div className="container">
         <div className="equipment-header">
           <div className="section-label reveal" style={{ justifyContent: 'center' }}>Equipment &amp; Capacity</div>
-          <h2 className="section-title reveal">World-Class <span style={{ color: 'var(--orange)' }}>Infrastructure</span></h2>
-          <p className="section-subtitle reveal" style={{ margin: '0 auto' }}>State-of-the-art machinery and production capabilities driving precision manufacturing at scale.</p>
+          {/* <h2 className="section-title reveal">World-Class <span style={{ color: 'var(--orange)' }}>Infrastructure</span></h2>
+          <p className="section-subtitle reveal" style={{ margin: '0 auto' }}>State-of-the-art machinery and production capabilities driving precision manufacturing at scale.</p> */}
         </div>
 
         <div className="equipment-grid">

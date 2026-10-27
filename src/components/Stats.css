@@ -47,11 +47,12 @@
         }
 
         .stat-text {
-          font-size: 10px;
-          color: rgba(255, 255, 255, 0.6);
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.85);
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 1.5px;
           font-weight: 600;
+          line-height: 1.4;
         }
 
         @keyframes fadeInUp {
@@ -86,8 +87,14 @@
 
 @media (max-width: 768px) {
   .stats-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 0;
+  }
+
+  .stat-text {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 480px) {

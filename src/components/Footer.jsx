@@ -27,11 +27,7 @@ export default function Footer() {
                 <img src="/images/om-technocrats-logo.png" alt="OM Technocrat Logo" className="nav-logo-img" />
               </a>
               <p>Precision engineered automotive sheet metal parts manufacturer serving renowned OEMs since 1994. IATF 16949:2016 Certified.</p>
-              <div className="footer-social">
-                <a href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
-                <a href="#" title="Facebook" aria-label="Facebook">f</a>
-                <a href="#" title="Twitter" aria-label="Twitter">𝕏</a>
-              </div>
+
             </div>
             <div className="footer-col">
               <h5>Quick Links</h5>
@@ -55,18 +51,9 @@ export default function Footer() {
                 <li><a href="#products">Risers</a></li>
               </ul>
             </div>
-            <div className="footer-col">
-              <h5>Contact</h5>
-              <ul>
-                <li><a href="tel:0253-2305001">0253-2305001</a></li>
-                <li><a href="mailto:inquiry@omtechnocrat.in">inquiry@omtechnocrat.in</a></li>
-                <li><a href="#contact">D-44/1, MIDC Ambad, Nashik</a></li>
-                <li><a href="#contact">Maharashtra – 422010</a></li>
-              </ul>
-            </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2024 OM TECHNOCRAT PVT. LTD. All rights reserved.</span>
+            <span>© OM TECHNOCRAT PVT. LTD. All rights reserved.</span>
             <span>Precision • Engineering Excellence • Trust</span>
           </div>
         </div>

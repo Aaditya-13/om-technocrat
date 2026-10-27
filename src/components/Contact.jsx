@@ -35,21 +35,21 @@ export default function Contact() {
               <div className="contact-info-item">
                 <div className="contact-info-icon"><i className="ph ph-map-pin"></i></div>
                 <div>
-                  <h4>Visit Our Factory</h4>
+                  <h4>Corporate Office</h4>
                   <p>D-44/1, MIDC Area, Ambad,<br />Nashik, Maharashtra – 422010, India</p>
                 </div>
               </div>
               <div className="contact-info-item">
                 <div className="contact-info-icon"><i className="ph ph-phone"></i></div>
                 <div>
-                  <h4>Call Us</h4>
+                  <h4>Contact</h4>
                   <a href="tel:0253-2305001">0253-2305001</a>
                 </div>
               </div>
               <div className="contact-info-item">
                 <div className="contact-info-icon"><i className="ph ph-envelope"></i></div>
                 <div>
-                  <h4>Email Us</h4>
+                  <h4>Email</h4>
                   <a href="mailto:inquiry@omtechnocrat.in">inquiry@omtechnocrat.in</a>
                 </div>
               </div>

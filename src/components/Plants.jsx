@@ -59,7 +59,7 @@ export default function Plants() {
           >
             Our Plants
           </motion.div>
-          <motion.h2
+          {/* <motion.h2
             className="section-title"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function Plants() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             World-Class <span style={{ color: 'var(--orange)' }}>Facilities</span>
-          </motion.h2>
+          </motion.h2> */}
         </div>
 
         <div
