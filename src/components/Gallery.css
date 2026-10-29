@@ -38,6 +38,12 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+.gallery-main-img.gallery-img-contain {
+  object-fit: contain;
+  object-position: center;
+  background-color: var(--charcoal);
+}
+
 .gallery-main-overlay {
   position: absolute;
   bottom: 0;

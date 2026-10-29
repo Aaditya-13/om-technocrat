@@ -65,7 +65,7 @@ export default function Gallery() {
                 key={`${activeCategory}-${currentSlide}`}
                 src={`/images/${currentImages[currentSlide].src}`}
                 alt={currentImages[currentSlide].label}
-                className="gallery-main-img"
+                className={`gallery-main-img ${['gallery/machinery/6th-machine.jpeg', 'gallery/machinery/3rd.jpg'].includes(currentImages[currentSlide].src) ? 'gallery-img-contain' : ''}`}
                 style={{ position: 'absolute', top: 0, left: 0 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

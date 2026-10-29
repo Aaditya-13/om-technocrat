@@ -27,7 +27,7 @@ export default function Contact() {
       <div className="container">
         <div className="section-label reveal">Get in Touch</div>
         <h2 className="section-title reveal">Let's Build <span style={{ color: 'var(--orange)' }}>Together</span></h2>
-        <p className="section-subtitle reveal">Partner with us for world-class automotive sheet metal solutions. Reach out for inquiries, quotes, or facility visits.</p>
+        <p className="section-subtitle reveal">Partner with us for world-class automotive sheet metal solutions. Reach out for enquiries, quotes, or facility visits.</p>
 
         <div className="contact-grid">
           <div className="reveal-left">
@@ -72,7 +72,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-form-wrapper reveal-right">
-            <h3>Send Us a Message</h3>
+            <h3>Business Enquiries</h3>
             <p>Fill out the form below and our team will get back to you within 24 hours.</p>
 
             <form id="contactForm" onSubmit={handleSubmit} style={{ display: isSuccess ? 'none' : 'block' }}>
@@ -82,8 +82,8 @@ export default function Contact() {
                   <label htmlFor="contactName">Full Name *</label>
                 </div>
                 <div className="form-group floating">
-                  <input type="text" id="contactCompany" name="company" className="form-control" placeholder=" " />
-                  <label htmlFor="contactCompany">Company</label>
+                  <input type="text" id="contactCompany" name="company" className="form-control" placeholder=" " required />
+                  <label htmlFor="contactCompany">Company *</label>
                 </div>
               </div>
               <div className="form-group floating">

@@ -26,7 +26,7 @@ export default function Footer() {
               <a href="#hero" className="nav-logo">
                 <img src="/images/om-technocrats-logo.png" alt="OM Technocrat Logo" className="nav-logo-img" />
               </a>
-              <p>Precision engineered automotive sheet metal parts manufacturer serving renowned OEMs since 1994. IATF 16949:2016 Certified.</p>
+              <p>Precision Engineered Automotive Sheet Metal Parts manufacturer serving renowned OEMs since 1994. IATF 16949:2016 Certified.</p>
 
             </div>
             <div className="footer-col">
