@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Plants from './components/Plants';
-import Clients from './components/Clients';
 import Products from './components/Products';
 import Equipment from './components/Equipment';
 import Gallery from './components/Gallery';
+import Plants from './components/Plants';
 import Certifications from './components/Certifications';
+import Clients from './components/Clients';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -39,12 +39,12 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Certifications />
-      <Plants />
-      <Clients />
       <Products />
       <Equipment />
       <Gallery />
+      <Plants />
+      <Certifications />
+      <Clients />
       <Contact />
       <Footer />
     </>
